@@ -55,7 +55,7 @@
  	- repository : 소스 코드가 관리되는 저장소 위치를 지정 (소스 코드 참여에 도움이 됨)
  	```
 		  "repository":{
-		  	"type": "git"
+		  	"type": "git",
 			"url": "http://github.com/chiabi/start"
 		  }
 	```
