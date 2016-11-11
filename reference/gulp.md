@@ -6,6 +6,7 @@
 	- [gulp 한국어 문서](https://github.com/preco21/gulp-docs-ko)
 	- [Gulp for Beginners](https://css-tricks.com/gulp-for-beginners/)
 	- [gulp 입문 1-Gulp에 대한 소개](http://programmingsummaries.tistory.com/356)
+	- [Gulp #1(걸프 설치 및 개요)](http://webclub.tistory.com/467)
 	- [12.2 편: GULP – 응용하기 (babel, webpack, nodemon, browser-sync)](https://velopert.com/1456)
 
 #### 1. 설치
