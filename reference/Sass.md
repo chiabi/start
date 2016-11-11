@@ -29,6 +29,9 @@ Sass 컴파일 방법
 
   > LibSass is a C/C++ port of the Sass engine. The point is to be simple, faster, and easy to integrate.
 
+  * [Ruby, gem?, Node.js, npm? 환경 설정 참고](https://github.com/chiabi/Sass-study/tree/master/chapter1)
+
+
 [node-sass](https://www.npmjs.com/package/node-sass)
 -----
  - Node.js 환경에서 libSass를 사용할 수 있게하는 라이브러리
@@ -37,8 +40,7 @@ Sass 컴파일 방법
  
  - Ruby Sass 보다 성능이 빠르지만 업데이트를 기다려야한다. ([참고 : sass compatibility](http://sass-compatibility.github.io/))
 
- 1. install
- 
+### install
 	```
 		# NPM 을 통하여 node-sass 글로벌 설치
 		$ npm install -g node-sass
@@ -49,3 +51,36 @@ Sass 컴파일 방법
 		# style.scss 파일에 변화가 있을 떄 마다 자동으로 리컴파일
 		$ node-sass style.scss -w -o .
  	```
+
+### [Options](https://github.com/sass/node-sass#command-line-interface)
+ 	```
+    -w, --watch                Watch a directory or file
+    -r, --recursive            Recursively watch directories or files
+    -o, --output               Output directory
+    -x, --omit-source-map-url  Omit source map URL comment from output
+    -i, --indented-syntax      Treat data from stdin as sass code (versus scss)
+    -q, --quiet                Suppress log output except on error
+    -v, --version              Prints version info
+    --output-style             CSS output style (nested | expanded | compact | compressed)
+    --indent-type              Indent type for output CSS (space | tab)
+    --indent-width             Indent width; number of spaces or tabs (maximum value: 10)
+    --linefeed                 Linefeed style (cr | crlf | lf | lfcr)
+    --source-comments          Include debug info in output
+    --source-map               Emit source map
+    --source-map-contents      Embed include contents in map
+    --source-map-embed         Embed sourceMappingUrl as data URI
+    --source-map-root          Base path, will be emitted in source-map as is
+    --include-path             Path to look for imported files
+    --follow                   Follow symlinked directories
+    --precision                The amount of precision allowed in decimal numbers
+    --error-bell               Output a bell character on errors
+    --importer                 Path to .js file containing custom importer
+    --functions                Path to .js file containing custom functions
+    --help                     Print usage info
+	```
+
+## Gulp Sass
+
+ > Gulp extension @dlmanning has created a gulp sass plugin based on node-sass: https://github.com/dlmanning/gulp-sass
+
+ *reference : [gulp.md](https://github.com/chiabi/start/blob/master/reference/gulp.md)
