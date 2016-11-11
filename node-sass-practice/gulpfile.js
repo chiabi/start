@@ -6,6 +6,7 @@ var config = require('./config'),
 	gulpif = require('gulp-if'),
 	minifyHTML = require('gulp-htmlmin'),
 	compass = require('gulp-compass'),
+	sassglobbing = require('gulp-sass-globbing'),
 	browserSync = require('browser-sync');
 
 gulp.task('default', ['serve']);
@@ -16,15 +17,15 @@ gulp.task('serve', ['html','compass'],function(){
 	gulp.start('watch');
 });
 gulp.task('watch', function(){
-	gulp.watch(config.dir.html, ['html']);
-	gulp.watch(config.compass.src, ['compass']);
+	gulp.watch( config.dir.html, ['html'] );
+	gulp.watch( config.compass.src, ['compass'] );
 });
 // Sass - Compass
 gulp.task('compass', function(){
 	gulp.src(config.compass.src)
-		.pipe(compass(config.compass.options))
-		.on('error', gutil.log)
-		.pipe(browserSync.stream());
+		.pipe( compass( config.compass.options ) )
+		.on( 'error', gutil.log )
+		.pipe( browserSync.stream() );
 });
 // HTML
 gulp.task('html', function() {

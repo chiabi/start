@@ -72,6 +72,3 @@
 		  "main": "lib/waza.js"
 	```
 	*prepublish 스크립트가 사용자들이 JavaScript로 변환하기 않고도 사용할 수 있도록 퍼블리싱 하기 전에 실행 됨</span>
-
-## Susy
- - [Susy doc](http://susydocs.oddbird.net/en/latest/install/)
