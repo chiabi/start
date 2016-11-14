@@ -1,0 +1,7 @@
+$var : blue;
+div {
+	background: $var;
+	span {
+		color: $var
+	}
+}

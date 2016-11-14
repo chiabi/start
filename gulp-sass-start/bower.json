@@ -1,0 +1,17 @@
+{
+  "name": "gulp-sass-start",
+  "description": "Sass를 위한 gulpfile",
+  "main": "gulpfile.js",
+  "authors": [
+    "chiabi <chiabi88@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/chiabi/start",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
