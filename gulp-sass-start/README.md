@@ -5,6 +5,8 @@
  	- [package.json.md](https://github.com/chiabi/start/blob/master/reference/package.json.md)
  	- [Configuring Gulp to use LibSass with Susy](https://zellwk.com/blog/gulp-libsass-with-susy/)
  	- [susy settings](http://webclub.tistory.com/246)
+ 	- [Build Web Layouts Easily with Susy](https://css-tricks.com/build-web-layouts-easily-susy/)
+ 	- [Website Layout Tools Compared: Flexbox Vs. Susy](https://www.smashingmagazine.com/2015/12/website-layout-tools-compared-flexbox-vs-susy/)
 
 ### 선행 작업 node.js, bower, gulp 설치
 - Node JS - [http://nodejs.org](http://nodejs.org)
