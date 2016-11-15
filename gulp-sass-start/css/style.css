@@ -1,6 +1,13 @@
-div {
-  background: blue; }
-  div span {
-    color: blue; }
+body {
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/*# sourceMappingURL=style.css.map */
+body:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*# sourceMappingURL=maps/style.css.map */

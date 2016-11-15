@@ -1,5 +1,6 @@
 ###사용자정의###
 src/components
+bower_components
 
 ###SASS###
 

@@ -1,0 +1,9 @@
+@import "bower_components/susy/sass/susy";
+
+$map: 12 .25 inside;
+$map2: (6em 1em) inside;
+@include layout($map $map2);
+
+body{
+	@include container(80em)
+}
