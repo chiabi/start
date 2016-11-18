@@ -1,9 +1,80 @@
 @import "bower_components/susy/sass/susy";
 
-$map: 12 .25 inside;
-$map2: (6em 1em) inside;
-@include layout($map $map2);
+body, div, ul{margin: 0; padding: 0;}
+ul, li{
+	list-style: none
+}
+@mixin clearfix{
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+// * --------------------------------
+// * Susy Global settings
+// * --------------------------------
+$susy: (
+	// 12 컬럼 : <number> | <list>
+	columns: 12,
+	// 컨테이너를 max-width: 1120px으로 : <length> | auto
+	container: 1120px,
+	// box-sizing을 border-box로 지정 : border-box | content-box
+	global-box-sizing: border-box,
+	debug: (
+	    image: show,
+	    color: rgba(#66f, .25),
+	    output: overlay,
+	    toggle: top right,
+	  ),
+	);
 
-body{
-	@include container(80em)
+/* border-box-sizing 믹스인 사용 */
+@include border-box-sizing;
+
+/**
+ * --------------------------------
+ * 컨테이너를 만들때 container 믹스인을 사용하여 만드는 것이 좋음
+ * --------------------------------
+ */
+
+.wrap {
+	@include container;
+	div{
+		height: 100px;
+	}
+
+	.content {
+		background: #e27373;
+		@media (min-width: 700px){
+			// @include span(8);
+		}	
+	}
+
+	/* 사이드 바가 4 columne이고 열에서 마지막임  */
+	.sidebar {
+		background: #ffb835;
+		@media (min-width: 700px){
+			// @include span(4 last);
+		}
+	}
+}
+
+.social{
+	background: black;
+	padding: gutter();
+	@include clearfix;
+
+	.social__list-item{
+		height: 70px;
+		background: #8cc1ac;
+		@include gallery(2 of 10);
+		margin-bottom: gutter(10);
+
+		@media (min-width: 700px){
+			@include gallery(1 of 10)
+			margin-bottom: 0
+		}
+	}
+
 }

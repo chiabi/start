@@ -1,0 +1,86 @@
+@charset "UTF-8";
+body, div, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.wrap {
+  max-width: isolate;
+  margin-left: auto;
+  margin-right: auto;
+  /* 사이드 바가 4 columne이고 열에서 마지막임  */
+}
+
+.wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+head {
+  display: block;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+  color: #333;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+head:before {
+  content: "|||";
+  display: block;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+head:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: red;
+}
+
+head:hover ~ .wrap,
+head:hover ~ body .wrap {
+  position: relative;
+}
+
+head:hover ~ .wrap:before,
+head:hover ~ body .wrap:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  z-index: 998;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 61.53846%, transparent 61.53846%, transparent 69.23077%, rgba(102, 102, 255, 0.25) 69.23077%, rgba(179, 179, 255, 0.25));
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+}
+
+.wrap div {
+  height: 100px;
+}
+
+.wrap .content {
+  background: #e27373;
+  width: 61.53846%;
+  float: left;
+  margin-right: 7.69231%;
+}
+
+.wrap .sidebar {
+  background: #ffb835;
+  width: 30.76923%;
+  float: right;
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=maps/asymmetric_grid.css.map */

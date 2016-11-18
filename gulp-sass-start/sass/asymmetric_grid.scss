@@ -1,0 +1,44 @@
+@import "bower_components/susy/sass/susy";
+
+body, div, ul{margin: 0; padding: 0;}
+ul, li{
+	list-style: none
+}
+@mixin clearfix{
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+// * --------------------------------
+// * Susy Global settings
+// * --------------------------------
+$susy: (
+	columns: 2 1,
+	container: isolate,
+	debug: (
+	    image: show,
+	    color: rgba(#66f, .25),
+	    output: overlay,
+	    toggle: top right,
+	  ),
+	);
+
+.wrap {
+	@include container;
+	div{
+		height: 100px;
+	}
+
+	.content {
+		background: #e27373;
+		@include span(1 first); 	
+	}
+
+	/* 사이드 바가 4 columne이고 열에서 마지막임  */
+	.sidebar {
+		background: #ffb835;
+		@include span(1 last);
+	}
+}
